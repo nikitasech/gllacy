@@ -13,6 +13,7 @@
                 <li>Каталог
                     <ul>
                         <li><a href="">Новинки</a></li>
+                        <hr>
                         <li><a href="catalog.html">Сливочное</a></li>
                         <li><a href="">Щербеты</a></li>
                         <li><a href="">Фруктовый лед</a></li>
@@ -23,11 +24,35 @@
                 <li><a href="">О компании</a></li>
             </ul>
             <ul>
-                <li>Поиск</li> <!-- Декоративный элемент. Текст можно скрыть с помошью font-size: 0; -->
-                <li>Вход</li> <!-- before -->
-                <li> <!-- Можно через before. В таком случае лучше скрыть текст "Корзина" так как на макете его нет, но это важный текст для скриндиреда, иначе не будет понятно что тут находится -->
+                <li>
+                    <span>Поиск</span>
+                    <div>
+                        <form action="https://echo.htmlacademy.ru" method="get">
+                            <label for="text-search" class="visually-hidden">Искать:</label>
+                            <input type="text" name="text-search" id="text-search" placeholder="Крем-брюле">
+                            <button type="submit">Найти</button>
+                        </form>
+                    </div>
+                </li>
+                <li>
+                    <span>Вход</span>
+                    <form action="https://echo.htmlacademy.ru" method="post">
+                        <p>
+                            <label for="login-email" class="visually-hidden">Ваш E-mail:</label>
+                            <input type="text" id="login-email" name="login-email" placeholder="email@example.com">
+                        </p>
+                        <p>
+                            <label for="login-password">Ваш пароль:</label>
+                            <input type="text" id="login-password" name="login-password" placeholder="••••••••">
+                        </p>
+                        <button type="submit">Войти</button>
+                        <a href="">Забыли пароль</a>
+                        <a href="">Новая регистрация</a>
+                    </form>
+                </li>
+                <li>
                     <a href="">
-                        <span>Корзина</span>
+                        <span class="visually-hidden">Корзина, </span>
                         пусто
                     </a>
                 </li>
@@ -38,30 +63,30 @@
             </div>
         </header>
         <main>
-            <h1>Магазин мороженого «Глейси»</h1>
+            <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
             <section>
-                <h2>Выгодные предложения</h2>
+                <h2 class="visually-hidden">Выгодные предложения</h2>
                 <ul>
                     <li>
                         <p>
                             Крем-брюле и пломбир
                             с малиновым джемом
                         </p>
-                        <button type="button">Давайте оба!</button>
+                        <a href="">Давайте оба!</a>
                     </li>
                     <li>
                         <p>
                             Шоколадный пломбир
                             и лимонный сорбет
                         </p>
-                        <button type="button">Давайте оба!</button>
+                        <a href="">Давайте оба!</a>
                     </li>
                     <li>
                         <p>
                             Пломбир с помадкой
                             и клубничный щербет
                         </p>
-                        <button type="button">Давайте оба!</button>
+                        <a href="">Давайте оба!</a>
                     </li>
                 </ul>
                 <ol>
@@ -71,7 +96,7 @@
                 </ol>
             </section>
             <section>
-                <h2>Акции</h2>
+                <h2 class="visually-hidden">Акции</h2>
                 <ul>
                     <li>
                         <p>Малинка даром!</p>
@@ -90,7 +115,7 @@
                 </ul>
             </section>
             <section>
-                <h2>Мини-каталог мороженого</h2>
+                <h2 class="visually-hidden">Мини-каталог мороженого</h2>
                 <ul>
                     <li>
                         <p>Хит</p>
@@ -124,26 +149,25 @@
             </section>
             <section>
                 <p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
-                <h3>Преимущества нашего магазина</h3>
+                <h3 class="visually-hidden">Преимущества нашего магазина</h3>
                 <ul>
-                    <li> <!-- before -->
+                    <li>
                         Все наше мороженое изготавливается на собственном
                         производстве, с использованием современного оборудования и
                         проверенных временем технологий.
                     </li>
-                    <li> <!-- before -->
+                    <li>
                         Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
                     </li>
-                    <li> <!-- before -->
+                    <li>
                         Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
                     </li>
-                    <li> <!-- before -->
+                    <li> 
                         Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
                     </li>
                 </ul>
             </section>
             <article>
-                <!-- background -->
                 <h3>Новое в нашем блоге</h3>
                 <a href="">
                     10 способов сервировки
@@ -152,17 +176,16 @@
                 </a>
             </article>
             <section>
-                <!-- Тут background или border-image. Но я склоняюсь к первому варианту, так как с border-image придется повозиться, да и старые браузеры его не поддерживают -->
-                <h2>Рассылка</h2>
+                <h2 class="visually-hidden">Рассылка</h2>
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-                <!-- <form>
-                    <label for="email-for-mailing">Ваша почта:</label>
-                    <input type="email" name="email" id="email-for-mailing">
-                    <input type="submit" value="Отправить">
-                </form> -->
+                <form action="https://echo.htmlacademy.ru" method="post">
+                    <label for="mailing-email" class="visually-hidden">Ваша почта:</label>
+                    <input type="email" name="email" id="email-for-mailing" placeholder="email@example.com">
+                    <button type="submit">Отправить</button>
+                </form>
             </section>
             <section>
-                <h2>Контактная информация</h2>
+                <h2 class="visually-hidden">Контактная информация</h2class="visually-hidden">
                 <div>
                     <p>
                         Адрес главного офиса и офлайн-магазина:
@@ -178,34 +201,26 @@
         </main>
         <footer>
             <section>
-                <h2>Наши социальные сети</h2>
+                <h2 class="visually-hidden">Наши социальные сети</h2>
                 <ul>
                     <li>
-                        <a href="">
-                            Твиттер <!-- font-size: 0; -->
-                        </a>
+                        <a href="">Твиттер</a>
                     </li>
                     <li>
-                        <a href="">
-                            Инстаграм <!-- font-size: 0; -->
-                        </a>
+                        <a href="">Инстаграм</a>
                     </li>
                     <li>
-                        <a href="">
-                            Фейсбук <!-- font-size: 0; -->
-                        </a>
+                        <a href="">Фейсбук</a>
                     </li>
                     <li>
-                        <a href="">
-                            Вконтакте <!-- font-size: 0; -->
-                        </a>
+                        <a href="">Вконтакте</a>
                     </li>
                 </ul>
             </section>
-            <section>
+            <section class="visually-hidden">
                 <h2>Информация о нас</h2>
                 <ul>
-                    <li><a href="">Для поставщиков</a></li> <!-- before -->
+                    <li><a href="">Для поставщиков</a></li>
                     <li><a href="">О производстве</a></li>
                     <li><a href="">Наши документы</a></li>
                     <li><a href="">Экологические стандарты</a></li>
@@ -218,5 +233,24 @@
                 <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2020</p>
             </div>
         </footer>
+        <section>
+            <h2>Форма обратной связи</h2>
+            <p>Мы обязательно вам ответим</p>
+            <form action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                    <label for="feedback-name" class="visually-hidden">Ваши имя и фамилия:</label>
+                    <input type="text" name="feedback-name" id="feedback-name" placeholder="Имя Фамилия">
+                </p>
+                <p>
+                    <label for="feedback-email" class="visually-hidden">Ваша почта:</label>
+                    <input type="text" name="feedback-email" id="feedback-email" placeholder="email@example.com">
+                </p>
+                <p>
+                    <label for="feedback-text" class="visually-hidden">Ваше пожелание:</label>
+                    <textarea name="feedback-text" id="feedback-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+                </p>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
     </body>
 </html>

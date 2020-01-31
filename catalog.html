@@ -13,6 +13,7 @@
                 <li>Каталог
                     <ul>
                         <li><a href="">Новинки</a></li>
+                        <hr>
                         <li><a href="catalog.html">Сливочное</a></li>
                         <li><a href="">Щербеты</a></li>
                         <li><a href="">Фруктовый лед</a></li>
@@ -23,13 +24,73 @@
                 <li><a href="">О компании</a></li>
             </ul>
             <ul>
-                <li><span>Поиск</span></li> <!-- Декоративный элемент. Текст можно скрыть с помошью font-size: 0; -->
-                <li>Вход</li> <!-- before -->
-                <li> <!-- Можно через before. В таком случае лучше скрыть текст "Корзина" так как на макете его нет, но это важный текст для скриндиреда, иначе не будет понятно что тут находится -->
+                <span>Поиск</span>
+                    <div>
+                        <form action="https://echo.htmlacademy.ru" method="get">
+                            <label for="text-search" class="visually-hidden">Искать:</label>
+                            <input type="text" name="text-search" id="text-search" placeholder="Крем-брюле">
+                            <button type="submit">Найти</button>
+                        </form>
+                    </div>
+                </li>
+                <li>
+                    <span>Вход</span>
+                    <form action="https://echo.htmlacademy.ru" method="post">
+                        <p>
+                            <label for="login-email" class="visually-hidden">Ваш E-mail:</label>
+                            <input type="text" id="login-email" name="login-email" placeholder="email@example.com">
+                        </p>
+                        <p>
+                            <label for="login-password">Ваш пароль:</label>
+                            <input type="text" id="login-password" name="login-password" placeholder="••••••••">
+                        </p>
+                        <button type="submit">Войти</button>
+                        <a href="">Забыли пароль</a>
+                        <a href="">Новая регистрация</a>
+                    </form>
+                </li>
+                <li>
                     <a href="">
                         <span>Корзина</span>
-                        пусто
+                        2 товара
                     </a>
+                    <div>
+                        <table>
+                            <tbody>
+                                <tr class="visually-hidden">
+                                    <th>Фотография</th>
+                                    <th>Название</th>
+                                    <th>Вес</th>
+                                    <th>Цена</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="img/products/product1.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой" width="33" height="33">
+                                    </td>
+                                    <td>Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой</td>
+                                    <td>1,5 кг х 200 руб.</td>
+                                    <td>300 руб.</td>
+                                    <td> <!-- Тут посчитал что лучше поменять местами через CSS -->
+                                        <button type="button">Удалить из корзины</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="img/products/product3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="33" height="33">
+                                    </td>
+                                    <td>Сливочно-клубничное с присыпкой из белого шоколада</td>
+                                    <td>1,5 кг х 300 руб</td>
+                                    <td>450 руб.</td>
+                                    <td>
+                                        <button type="button">Удалить из корзины</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <strong>Итого: 750 руб.</strong>
+                        <a href="">Оформить заказ</a>
+                    </div>
                 </li>
             </ul>
             <div>
@@ -40,7 +101,7 @@
         <main>
             <h1>Сливочное мороженое</h1>
             <ol>
-                <li><a href="index.html">Главная</a></li> <!-- Елочки так-же можно добавить через after чтобы не засорять разметку -->
+                <li><a href="index.html">Главная</a></li>
                 <li><a href=""></a>Каталог</li>
                 <li><a href=""></a>Сливочное</li>
             </ol>
@@ -104,77 +165,76 @@
                 <h2>Товары</h2>
                 <ul>
                     <li>
-                        <img src="img/products/product1.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой
-                        " width="267" height="267">
+                        <img src="img/products/product1.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
                         <a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                         <p>310 ₽/кг</p>
+                        <button type="button" class="visually-hidden">Быстрый просмотр</button>
                     </li>
                     <li>
-                        <img src="img/products/product2.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой
-                        " width="267" height="267">
+                        <img src="img/products/product2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
                         <a href="">Сливочно-кофейное с кусочками шоколада</a>
                         <p>380 ₽/кг</p>
+                        <button type="button" class="visually-hidden">Быстрый просмотр</button>
                     </li>
                     <li>
-                        <img src="img/products/product3.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой
-                        " width="267" height="267">
+                        <img src="img/products/product3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
                         <a href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
                         <p>355 ₽/кг</p>
+                        <button type="button" class="visually-hidden">Быстрый просмотр</button>
                     </li>
                     <li>
-                        <img src="img/products/product4.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой
-                        " width="267" height="267">
+                        <img src="img/products/product4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
                         <a href="">Сливочное крем-брюле с карамельной подливкой</a>
                         <p>415 ₽/кг</p>
+                        <button type="button" class="visually-hidden">Быстрый просмотр</button>
                     </li>
                     <li>
-                        <img src="img/products/product5.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой
-                        " width="267" height="267">
+                        <img src="img/products/product5.jpg" alt="Сливочное с брусничным джемом" width="267" height="267">
                         <a href="">Сливочное с брусничным джемом</a>
                         <p>325 ₽/кг</p>
+                        <button type="button" class="visually-hidden">Быстрый просмотр</button>
                     </li>
                     <li>
-                            <img src="img/products/product6.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой
-                            " width="267" height="267">
-                            <a href="">Сливочно-черничное с цельными ягодами черники</a>
-                        
+                        <img src="img/products/product6.jpg" alt="Сливочно-черничное с цельными ягодами черники" width="267" height="267">
+                        <a href="">Сливочно-черничное с цельными ягодами черники</a>
                         <p>410 ₽/кг</p>
+                        <button type="button" class="visually-hidden">Быстрый просмотр</button>
                     </li>
                     <li>
-                        <img src="img/products/product7.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой
-                        " width="267" height="267">
+                        <img src="img/products/product7.jpg" alt="Сливочно-aлимонное с карамельной присыпкой" width="267" height="267">
                         <a href="">Сливочно-aлимонное с карамельной присыпкой</a>
                         <p>375 ₽/кг</p>
+                        <button type="button" class="visually-hidden">Быстрый просмотр</button>
                     </li>
                     <li>
-                        <img src="img/products/product8.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой
-                        " width="267" height="267">
+                        <img src="img/products/product8.jpg" alt="Сливочное с шоколадной стружкой" width="267" height="267">
                         <a href="">Сливочное с шоколадной стружкой</a>
                         <p>320 ₽/кг</p>
+                        <button type="button" class="visually-hidden">Быстрый просмотр</button>
                     </li>
                     <li>
-                        <img src="img/products/product9.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой
-                        " width="267" height="267">
+                        <img src="img/products/product9.jpg" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
                         <a href="">Сливочно-ванильное с кусочками шоколада</a>
                         <p>440 ₽/кг</p>
+                        <button type="button" class="visually-hidden">Быстрый просмотр</button>
                     </li>
                     <li>
-                        <img src="img/products/product10.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой
-                        " width="267" height="267">
+                        <img src="img/products/product10.jpg" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
                         <a href="">Сливочноe с ментоловым сиропом</a>
                         <p>435 ₽/кг</p>
+                        <button type="button" class="visually-hidden">Быстрый просмотр</button>
                     </li>
                     <li>
-                        <img src="img/products/product11.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой
-                        " width="267" height="267">
+                        <img src="img/products/product11.jpg" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
                         <a href="">Сливочное с кусочками черного шоколада</a>
                         <p>355 ₽/кг</p>
+                        <button type="button" class="visually-hidden">Быстрый просмотр</button>
                     </li>
                     <li>
-                        <img src="img/products/product12.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой
-                        " width="267" height="267">
+                        <img src="img/products/product12.jpg" alt="Сливочное с мятным сиропом" width="267" height="267">
                         <a href="">Сливочное с мятным сиропом</a>
                         <p>420 ₽/кг</p>
+                        <button type="button" class="visually-hidden">Быстрый просмотр</button>
                     </li>
                 </ul>
             </section>
@@ -193,31 +253,23 @@
                 <h2>Наши социальные сети</h2>
                 <ul>
                     <li>
-                        <a href="">
-                            Твиттер <!-- font-size: 0; -->
-                        </a>
+                        <a href="">Твиттер</a>
                     </li>
                     <li>
-                        <a href="">
-                            Инстаграм <!-- font-size: 0; -->
-                        </a>
+                        <a href="">Инстаграм</a>
                     </li>
                     <li>
-                        <a href="">
-                            Фейсбук <!-- font-size: 0; -->
-                        </a>
+                        <a href="">Фейсбук</a>
                     </li>
                     <li>
-                        <a href="">
-                            Вконтакте <!-- font-size: 0; -->
-                        </a>
+                        <a href="">Вконтакте</a>
                     </li>
                 </ul>
             </section>
             <section>
                 <h2>Информация о нас</h2>
                 <ul>
-                    <li><a href="">Для поставщиков</a></li> <!-- before -->
+                    <li><a href="">Для поставщиков</a></li>
                     <li><a href="">О производстве</a></li>
                     <li><a href="">Наши документы</a></li>
                     <li><a href="">Экологические стандарты</a></li>
