@@ -34,6 +34,7 @@ a {
 
 .site-nav {
     font-size: 16px;
+    line-height: 18px;
     font-weight: 700;
 }
 
@@ -43,6 +44,7 @@ a {
 
 .user-nav {
     font-size: 14px;
+    line-height: 16px;
     font-weight: 500;
 }
 
@@ -56,15 +58,7 @@ a {
     content: url("../img/icons/search.svg");
 }
 
-.nav-item-search:before {
-    content: url("../img/icons/search.svg");
-}
-
 .nav-item-login::before {
-    content: url("../img/icons/login.svg");
-}
-
-.nav-item-login:before {
     content: url("../img/icons/login.svg");
 }
 
@@ -72,15 +66,7 @@ a {
     content: url("../img/icons/basket-on.svg");
 }
 
-.basket-link-on:before {
-    content: url("../img/icons/basket-on.svg");
-}
-
 .basket-link-off::before {
-    content: url("../img/icons/basket-off.svg");
-}
-
-.basket-link-off:before {
     content: url("../img/icons/basket-off.svg");
 }
 
@@ -98,6 +84,16 @@ a {
     line-height: 24px;
 }
 
+.breadcrumbs li:not(:first-child)::before {
+    content: "»";
+}
+
+.title-page {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 41px;
+}
+
 .about-us {
     color: #323232;
 
@@ -112,7 +108,6 @@ a {
 }
 
 .advantages {
-    line-height: 22px;
     list-style: none;
 }
 
@@ -120,15 +115,7 @@ a {
     content: url("../img/icons/advantage-1.svg");
 }
 
-.advantages .own-technology:before {
-    content: url("../img/icons/advantage-1.svg");
-}
-
 .advantages .good-ingredients::before {
-    content: url("../img/icons/advantage-2.svg");
-}
-
-.advantages .good-ingredients:before {
     content: url("../img/icons/advantage-2.svg");
 }
 
@@ -136,15 +123,7 @@ a {
     content: url("../img/icons/advantage-3.svg");
 }
 
-.advantages .trusted-partners:before {
-    content: url("../img/icons/advantage-3.svg");
-}
-
 .advantages .special-delivery::before {
-    content: url("../img/icons/advantage-4.svg");
-}
-
-.advantages .special-delivery:before {
     content: url("../img/icons/advantage-4.svg");
 }
 
@@ -211,44 +190,29 @@ a {
     list-style: none;
 }
 
-.social-icon {
+.socials-list li {
     font-size: 0;
-}
-
-.twitter:before {
-    content: url("../img/icons/social/twitter.svg");
 }
 
 .twitter::before {
     content: url("../img/icons/social/twitter.svg");
 }
 
-.instagram:before {
-    content: url("../img/icons/social/instagram.svg");
-}
-
 .instagram::before {
     content: url("../img/icons/social/instagram.svg");
-}
-
-.facebook:before {
-    content: url("../img/icons/social/facebook.svg");
 }
 
 .facebook::before {
     content: url("../img/icons/social/facebook.svg");
 }
 
-.vkontakte:before {
-    content: url("../img/icons/social/vkontakte.svg");
-}
-
 .vkontakte::before {
     content: url("../img/icons/social/vkontakte.svg");
 }
 
-.about-company-list {
+.about-company-list li {
     font-size: 13px;
+    line-height: 16px;
     list-style: none;
     font-weight: inherit;
 }
@@ -261,16 +225,19 @@ a {
     content: url("../img/icons/heart.svg");
 }
 
-.suppliers:before {
-    content: url("../img/icons/heart.svg");
-}
-
 .made-in {
     font-size: 12px;
+    line-height: 18px;
 }
 
 .feedback {
     display: none;
+}
+
+.breadcrumbs {
+    font-size: 14px;
+    line-height: 16px;
+    list-style: none;
 }
 
 /* .filter-range {
