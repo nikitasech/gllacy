@@ -11,6 +11,10 @@ body {
     background-color: #849d8f;
 }
 
+.catalog-body {
+    background: linear-gradient(to bottom, #9db1a5 0%, #849d8f 35%);
+}
+
 a, 
 .link {
     text-decoration: none;
