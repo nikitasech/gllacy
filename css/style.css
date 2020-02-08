@@ -58,7 +58,7 @@ a {
 }
 
 .main-header {
-    margin-top: 12px;
+    margin-top: 11px;
 }
 
 .layout-start {
@@ -83,6 +83,8 @@ a {
 .user-nav {
     display: flex;
     align-items: center;
+    /* margin: 0; */
+    padding: 0;
 }
 
 .site-nav {
@@ -121,7 +123,7 @@ a {
 .nav-item-login,
 .basket-link-off,
 .basket-link-on {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     padding: 8px;
@@ -134,7 +136,7 @@ a {
 .nav-item-login,
 .basket-link-off,
 .basket-link-on {
-    padding: 6px 18px;
+    padding: 6px 17px;
 }
 
 .nav-item-search {
@@ -151,14 +153,20 @@ a {
 }
 
 .nav-item-login::before {
+    margin-right: 5px;
+
     content: url("../img/icons/login.svg");
 }
 
 .basket-link-on::before {
+    margin-right: 5px;
+
     content: url("../img/icons/basket-on.svg");
 }
 
 .basket-link-off::before {
+    margin-right: 5px;
+
     content: url("../img/icons/basket-off.svg");
 }
 
