@@ -15,12 +15,28 @@ body {
     background: linear-gradient(to bottom, #9db1a5 0%, #849d8f 35%);
 }
 
-a, 
-.link {
+a {
     text-decoration: none;
-    color: white;
+    color: inherit;
+}
 
+.link {
     border-bottom: 1px solid rgba(256, 256, 256, 0.2);
+}
+
+.button {
+    padding: 11px 19px;
+    border: none;
+    
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #ffffff;
+
+    background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+    box-shadow: 0 2px 2px #ac1000;
+    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+    border-radius: 60px;
 }
 
 .visually-hidden {
@@ -55,7 +71,6 @@ a,
 
 .link-logo {
     align-self: flex-start;
-    border-bottom: none;
 }
 
 .site-nav,
@@ -67,6 +82,7 @@ a,
 .site-nav,
 .user-nav {
     display: flex;
+    align-items: center;
 }
 
 .site-nav {
@@ -105,7 +121,9 @@ a,
 .nav-item-login,
 .basket-link-off,
 .basket-link-on {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 8px;
 
     background-color: rgba(256, 256, 256, 0.2);
@@ -121,9 +139,10 @@ a,
 
 .nav-item-search {
     min-width: 17px;
-    min-width: 17px;
+    min-height: 17px;
 
     font-size: 0;
+    line-height: 0;
 
     background-image: url("../img/icons/search.svg");
     background-repeat: no-repeat;
@@ -354,6 +373,8 @@ a,
     display: flex;
     flex-wrap: wrap;
     width: 350px;
+
+    list-style: none;
 }
 
 .about-company-list li {
@@ -361,7 +382,6 @@ a,
 
     font-size: 13px;
     line-height: 16px;
-    list-style: none;
     font-weight: inherit;
 }
 
@@ -376,10 +396,6 @@ a,
 .made-in {
     font-size: 12px;
     line-height: 18px;
-}
-
-.made-in .logo-htmlacademy {
-    border: none;
 }
 
 .feedback {
