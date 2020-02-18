@@ -18,8 +18,7 @@
                         <li class="site-nav__list-item">
                             <span class="site-nav__item-link site-nav__item-link_active" tabindex="0">Каталог</span>
                             <ul class="site-nav__catalog-list">
-                                <li class="site-nav__catalog-item">
-                                    <a href="" class="site-nav__catalog-link">Новинки</a>
+                                <li class="site-nav__catalog-item">Новинки</li>
                                 </li>
                                 <li class="site-nav__catalog-item">
                                     <a class="site-nav__catalog-link site-nav__catalog-link_active">Сливочное</a>
@@ -47,7 +46,12 @@
             <div class="user-layout">
                 <ul class="user-nav__list">
                     <li class="user-nav__list-item user-nav__list-item--serch">
-                        <span class="user-nav__item-text user-nav__item-text--search" tabindex="0">Поиск</span>
+                        <span class="user-nav__item-text user-nav__item-text--search" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+                                <path fill="#FFF" d="M17 15.5l-5.3-5.2A6.5 6.5 0 0013 6.5 6.5 6.5 0 106.5 13a6.5 6.5 0 003.8-1.3l5.2 5.2 1.5-1.4zM6.5 11a4.5 4.5 0 110-9 4.5 4.5 0 010 9z" class="user-nav__icon"/>
+                            </svg>
+                            Поиск
+                        </span>
                         <form action="https://echo.htmlacademy.ru" method="get" class="user-nav__search-form form">
                             <label for="text-search" class="form__label visually-hidden">Искать:</label>
                             <input type="text" name="text-search" id="text-search" placeholder="Крем-брюле" class="form__field input-field">
@@ -55,7 +59,15 @@
                         </form>
                     </li>
                     <li class="user-nav__list-item user-nav__list-item--login">
-                        <span class="user-nav__item-text user-nav__item-text--login" tabindex="0">Вход</span>
+                        <span class="user-nav__item-text user-nav__item-text--login" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19">
+                                <g fill="#FFF" class="user-nav__icon">
+                                    <path d="M6 14.9l7-5.4-7-5.4v3H0V12h6z"/>
+                                    <path d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13a2 2 0 002-2V2a2 2 0 00-2-2z"/>
+                                </g>
+                            </svg>
+                            Вход
+                        </span>
                         <form action="https://echo.htmlacademy.ru" method="post" class="user-nav__login-form form">
                             <p class="form__paragraph">
                                 <label for="login-email" class="form__label visually-hidden">Ваш E-mail:</label>
@@ -296,13 +308,27 @@
                 </ul>
             </section>
             <ul class="paginator-list container">
-                <li class="paginator-list__item"><a href="" class="paginator-list__link paginator-list__link_back paginator-list__link_disabled">Назад</a></li>
+                <li class="paginator-list__item">
+                    <a class="paginator-list__link paginator-list__link_back paginator-list__link_disabled">
+                        Назад
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
+                            <path fill="#ffffff" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"/>
+                        </svg>
+                    </a>
+                </li>
                 <li class="paginator-list__item"><a href="" class="paginator-list__link paginator-list__link_active">1</a></li>
                 <li class="paginator-list__item"><a href="" class="paginator-list__link">2</a></li>
                 <li class="paginator-list__item"><a href="" class="paginator-list__link">3</a></li>
                 <li class="paginator-list__item"><a href="" class="paginator-list__link">4</a></li>
                 <li class="paginator-list__item"><a href="" class="paginator-list__link">5</a></li>
-                <li class="paginator-list__item"><a href="" class="paginator-list__link paginator-list__link_forward">Вперед</a></li>
+                <li class="paginator-list__item">
+                    <a href="" class="paginator-list__link paginator-list__link_forward">
+                        Вперед
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
+                            <path fill="#ffffff" d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </main>
         <footer class="main-footer container">
