@@ -42,7 +42,6 @@ a {
 .button {
     padding: 9px 24px;
     border: none;
-    box-sizing: content-box;
     
     font-size: 18px;
     font-weight: 700;
@@ -139,13 +138,16 @@ a {
     font-weight: 700;
 }
 
+.site-nav__list-item {
+    position: relative;
+}
+
 .site-nav__item-link {
     position: relative;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 33px;
     min-height: 33px;
     margin-right: 2px;
     padding: 0 13px;
@@ -192,14 +194,16 @@ a {
 
 .site-nav__catalog-list {
     position: absolute;
+    left: -5px;
 
     visibility: hidden;
     min-width: 143px;
     min-height: 14px;
-    margin: 5px 0 0 -5px;
+    margin-top: 5px;
     padding: 7px 0;
 
     font-weight: 400;
+    font-size: 14px;
     color: #323232;
 
     background-color: #f8f7f4;
@@ -215,29 +219,48 @@ a {
     visibility: visible;
 }
 
+.site-nav__catalog-item:first-child {
+    display: block;
+    width: 100%;
+    padding: 5px 20px 10px 20px;
+    margin: 3px 0;
+    box-sizing: border-box;
+
+    font-weight: 700;
+
+    cursor: default;
+}
+
+.site-nav__catalog-item:nth-child(2)::before {
+    position: relative;
+    top: -4px;
+
+    display: block;
+    width: calc(100% - 15px);
+    margin: 0 auto;
+    height: 1px;
+
+    border-bottom: 1px solid rgba(53, 53, 53, 0.2);
+
+    content: "";
+}
+
 .site-nav__catalog-link {
     display: block;
     width: 100%;
     padding: 5px 20px;
     margin: 3px 0;
+    box-sizing: border-box;
 
     cursor: pointer;
 
     transition: background ease-in-out 0.15s;
-
-    box-sizing: border-box;
 }
 
 .site-nav__catalog-link_active {
     color: #fff;
 
     background-color: #d07058;
-}
-
-.site-nav__catalog-item:first-child .site-nav__catalog-link {
-    margin: 0 0 10px 0;
-
-    font-weight: 700;
 }
 
 .site-nav__catalog-link:hover,
@@ -257,20 +280,6 @@ a {
     background-color: #d07058;
 }
 
-.site-nav__catalog-item:first-child::after {
-    position: relative;
-    top: -4px;
-
-    display: block;
-    width: calc(100% - 15px);
-    margin: 0 auto;
-    height: 1px;
-
-    border-bottom: 1px solid rgba(53, 53, 53, 0.2);
-
-    content: "";
-}
-
 .site-nav__item-link:hover ~ .site-nav__catalog-list,
 .site-nav__item-link:focus ~ .site-nav__catalog-list {
     visibility: visible;
@@ -285,12 +294,15 @@ a {
 }
 
 .user-nav__list-item {
+    position: relative;
+
     margin-left: 10px;
 }
 
 .user-nav__search-form,
 .user-nav__login-form,
 .user-nav__basket-popup {
+    position: absolute;
     visibility: hidden;
 
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -344,12 +356,9 @@ a {
 }
 
 .user-nav__search-form {
-    position: absolute;
+    right: 0;
 
-    min-width: 86px;
-    min-height: 86px;
     padding: 20px 15px;
-    margin-left: -305px;
     margin-top: 5px;
 
     background-color: #f8f7f4;
@@ -401,12 +410,11 @@ a {
 }
 
 .user-nav__login-form {
-    position: absolute;
-    width: 247px;
+    right: 0;
 
+    width: 247px;
     padding: 21px 18px;
     margin-top: 5px;
-    margin-left: -190px;
 
     background-color: #f8f7f4;
     border-radius: 5px;
@@ -472,14 +480,13 @@ a {
 }
 
 .user-nav__basket-popup {
-    position: absolute;
+    right: 0;
 
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     padding: 20px 15px;
     margin-top: 5px;
-    margin-left: -445px;
     max-width: 540px;
 
     color: #323232;
@@ -543,14 +550,8 @@ a {
     font-weight: 700;
 }
 
-.short-contact__working-time {
-    margin: 20px 0 4px 0;
-
-    font-size: 14px;
-    line-height: 16px;
-}
-
 .short-contact__tel {
+    display: block;
     border: none;
 
     font-size: 22px;
@@ -766,14 +767,14 @@ a {
     font-size: 14px;
     line-height: 20px;
     color: #323232;
-
-    background-color: #ffffff;
 }
 
 .contacts__map {
-    width: 100%; 
+    width: 1200px; 
     height: 430px;
+    margin: 0 auto;
 
+    background-color: #849D8F;
     background-image: url("../img/map.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -1026,8 +1027,8 @@ a {
 .about-company__list {
     display: flex;
     flex-wrap: wrap;
-    width: 360px;
-    padding: 0;
+    width: 340px;
+    padding-left: 30px;
 
     font-size: 13px;
     line-height: 16px;
@@ -1036,7 +1037,8 @@ a {
 }
 
 .about-company__item {
-    margin: 5px 15px;
+    min-width: 142px;
+    margin-bottom: 7px;
 }
 
 .about-company__favourite {
@@ -1062,6 +1064,10 @@ a {
 .made-in {
     font-size: 12px;
     line-height: 18px;
+}
+
+.made-in__text {
+    margin: 0;
 }
 
 .feedback {
