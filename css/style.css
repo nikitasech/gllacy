@@ -414,7 +414,7 @@ a {
     padding: 0 17px;
 }
 
-.user-nav__list-item_user-nav__list-item_serch:hover .user-nav__search-form {
+.user-nav__list-item_serch:hover .user-nav__search-form {
     visibility: visible;
 }
 
