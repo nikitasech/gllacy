@@ -49,8 +49,8 @@
                 </div>
                 <div class="user-layout">
                     <ul class="user-nav__list">
-                        <li class="user-nav__list-item user-nav__list-item--serch">
-                            <span class="user-nav__item-text user-nav__item-text--search" tabindex="0">
+                        <li class="user-nav__list-item user-nav__list-item_serch">
+                            <span class="user-nav__item-text user-nav__item-text_search" tabindex="0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
                                     <path fill="#FFF" d="M17 15.5l-5.3-5.2A6.5 6.5 0 0013 6.5 6.5 6.5 0 106.5 13a6.5 6.5 0 003.8-1.3l5.2 5.2 1.5-1.4zM6.5 11a4.5 4.5 0 110-9 4.5 4.5 0 010 9z" class="user-nav__icon"/>
                                 </svg>
@@ -62,8 +62,8 @@
                                 <button type="submit" class="form__submit visually-hidden">Найти</button>
                             </form>
                         </li>
-                        <li class="user-nav__list-item user-nav__list-item--login">
-                            <span class="user-nav__item-text user-nav__item-text--login" tabindex="0">
+                        <li class="user-nav__list-item user-nav__list-item_login">
+                            <span class="user-nav__item-text user-nav__item-text_login" tabindex="0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19">
                                     <g fill="#FFF" class="user-nav__icon">
                                         <path d="M6 14.9l7-5.4-7-5.4v3H0V12h6z"/>
@@ -90,8 +90,8 @@
                                 </div>
                             </form>
                         </li>
-                        <li class="user-nav__list-item user-nav__list-item--basket">
-                            <a href="" class="user-nav__item-text user-nav__item-text--basket_disabled">
+                        <li class="user-nav__list-item user-nav__list-item_basket">
+                            <a href="" class="user-nav__item-text user-nav__item-text_basket">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
                                     <g fill="#FFF" class="user-nav__icon">
                                         <path d="M5.7 2l-.3-2H0v2h3.6l1.5 13h14l1.7-13H5.7zm11.7 11H6.9L6 4h12.6l-1.1 9z"/>
@@ -162,7 +162,7 @@
                     <section>
                         <h2 class="visually-hidden">Мини-каталог мороженого</h2>
                         <ul class="products__list">
-                            <li class="products__item product">
+                            <li class="products__item product product_hit">
                                 <img src="img/products/product1.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="product__img">
                                 <p class="product__price">310₽<span class="product__weight">/кг</span></p>   
                                 <h3 class="product__name"><a href="" class="link_light">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
@@ -170,7 +170,7 @@
                                     <a href="" class="product__button button">Быстрый просмотр</a>
                                 </div>
                             </li>
-                            <li class="products__item product">
+                            <li class="products__item product product_hit">
                                 <img src="img/products/product2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267" class="product__img">
                                 <p class="product__price">380₽<span class="product__weight">/кг</span></p>
                                 <h3 class="product__name"><a href="" class="link_light">Сливочно-кофейное с кусочками шоколада</a></h3>
@@ -178,7 +178,7 @@
                                     <a href="" class="product__button button">Быстрый просмотр</a>
                                 </div>
                             </li>
-                            <li class="products__item product">
+                            <li class="products__item product product_hit">
                                 <img src="img/products/product3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267" class="product__img">
                                 <p class="product__price">355₽<span class="product__weight">/кг</span></p>
                                 <h3 class="product__name"><a href="" class="link_light">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
@@ -186,7 +186,7 @@
                                     <a href="" class="product__button button">Быстрый просмотр</a>
                                 </div>
                             </li>
-                            <li class="products__item product">
+                            <li class="products__item product product_hit">
                                 <img src="img/products/product4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267" class="product__img">
                                 <p class="product__price">415₽<span class="product__weight">/кг</span></p>
                                 <h3 class="product__name"><a href="" class="link_light">Сливочное крем-брюле с карамельной подливкой</a></h3>
@@ -230,7 +230,7 @@
                                 <p class="mailing__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                                 <form action="https://echo.htmlacademy.ru" method="post" class="mailing__form form">
                                     <label for="mailing-email" class="visually-hidden">Ваша почта:</label>
-                                    <input type="email" name="email" id="mailing-email" placeholder="email@example.com" class="form__field">
+                                    <input type="email" name="email" id="mailing-email" placeholder="email@example.com" class="form__field" required>
                                     <button type="submit" class="mailing__button button">Отправить</button>
                                 </form>
                             </div>
@@ -239,7 +239,9 @@
                 </div>
                 <section class="contacts">
                     <h2 class="visually-hidden">Контактная информация</h2>
-                    <div id="map" class="contacts__map"><img src="img/map.png" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург" class="contacts__image" width="1200" height="430"></div>
+                    <div id="map" class="contacts__map">
+                        <img src="img/map.png" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург" class="contacts__image" width="1200" height="430">
+                    </div>
                     <div class="contacts__box">
                         <p class="contacts__title_address">Адрес главного офиса и офлайн-магазина:</p>
                         <p class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
@@ -250,7 +252,7 @@
                             </a>
                             (с 10 до 20 ежедневно)
                         </p>
-                        <button type="button" class="contacts__button button">Форма обратной связи</button>
+                        <button type="button" class="contacts__button contacts__feedback button">Форма обратной связи</button>
                     </div>
                 </section>
             </main>
@@ -281,8 +283,8 @@
                                 <path d="M10.8 0C9.4 0 8.2.7 7.5 1.7A4.1 4.1 0 004.2 0 4.1 4.1 0 000 4c0 3.2 7.5 9 7.5 9S15 7.2 15 4c0-2.2-1.9-4-4.2-4z"/>
                             </svg>
                         </li>
-                        <li class="about-company__item"><a href="" class="about-company__link link_light">О производстве</a></li>
                         <li class="about-company__item"><a href="" class="about-company__link link_light">Наши документы</a></li>
+                        <li class="about-company__item"><a href="" class="about-company__link link_light">О производстве</a></li>
                         <li class="about-company__item"><a href="" class="about-company__link link_light">Экологические стандарты</a></li>
                     </ul>
                 </section>
@@ -303,16 +305,18 @@
                 </p>
                 <p class="form__paragraph modal__paragraph">
                     <label for="feedback-email" class="visually-hidden">Ваша почта:</label>
-                    <input type="text" name="feedback-email" id="feedback-email" placeholder="email@example.com" class="form__field modal__field">
+                    <input type="email" name="feedback-email" id="feedback-email" placeholder="email@example.com" class="form__field modal__field">
                 </p>
                 <p class="form__paragraph modal__paragraph">
                     <label for="feedback-text" class="visually-hidden">Ваше пожелание:</label>
-                    <textarea name="feedback-text" id="feedback-text" cols="30" rows="10" placeholder="В свободной форме" class="form__textarea modal__textarea"></textarea>
+                    <textarea name="feedback-text" id="feedback-text" cols="30" rows="10" placeholder="В свободной форме" class="form__textarea modal__textarea form__field"></textarea>
                 </p>
                 <button type="submit" class="button modal__button">Отправить</button>
                 <button type="button" class="modal__close">Закрыть</button>
             </form>
         </section>
-        <script src="js/script.js"></script>
+        <script src="js/map.js"></script>
+        <script src="js/general.js"></script>
+        <script src="js/feedback.js"></script>
     </body>
 </html>

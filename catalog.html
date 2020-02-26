@@ -44,8 +44,8 @@
             </div>
             <div class="user-layout">
                 <ul class="user-nav__list">
-                    <li class="user-nav__list-item user-nav__list-item--serch">
-                        <span class="user-nav__item-text user-nav__item-text--search" tabindex="0">
+                    <li class="user-nav__list-item user-nav__list-item_serch">
+                        <span class="user-nav__item-text user-nav__item-text_search" tabindex="0">
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
                                 <path fill="#FFF" d="M17 15.5l-5.3-5.2A6.5 6.5 0 0013 6.5 6.5 6.5 0 106.5 13a6.5 6.5 0 003.8-1.3l5.2 5.2 1.5-1.4zM6.5 11a4.5 4.5 0 110-9 4.5 4.5 0 010 9z" class="user-nav__icon"/>
                             </svg>
@@ -57,8 +57,8 @@
                             <button type="submit" class="form__submit visually-hidden">Найти</button>
                         </form>
                     </li>
-                    <li class="user-nav__list-item user-nav__list-item--login">
-                        <span class="user-nav__item-text user-nav__item-text--login" tabindex="0">
+                    <li class="user-nav__list-item user-nav__list-item_login">
+                        <span class="user-nav__item-text user-nav__item-text_login" tabindex="0">
                             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19">
                                 <g fill="#FFF" class="user-nav__icon">
                                     <path d="M6 14.9l7-5.4-7-5.4v3H0V12h6z"/>
@@ -85,8 +85,13 @@
                             </div>
                         </form>
                     </li>
-                    <li class="user-nav__list-item user-nav__list-item--basket">
-                        <a href="" class="user-nav__item-text user-nav__item-text--basket">
+                    <li class="user-nav__list-item user-nav__list-item_basket">
+                        <a href="" class="user-nav__item-text user-nav__item-text_basket user-nav__item-text_active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"><path fill="#E84D37" d="M5.89 4.03L6.92 13h10.45l1.18-8.97z"/>
+                                <circle cx="6.98" cy="18" r="2" fill="#343434"/>
+                                <circle cx="15.98" cy="18" r="2" fill="#343434"/>
+                                <path fill="#343434" d="M5.66 2.03L5.42 0H0v2h3.64l1.5 13h13.99l1.7-12.97H5.66zM17.37 13H6.92L5.9 4.03h12.66L17.37 13z"/>
+                            </svg>
                             <span class="user-nav__basket-text">Корзина</span>
                             2 товара
                         </a>
@@ -113,7 +118,7 @@
                                         </td>
                                         <td class="user-nav__basket-cell">Клубничный пломбир с присыпкой 
                                             из белого шоколада</td>
-                                        <td class="user-nav__basket-cell">1,5 кг х <span class="user-nav__basket-price">300 руб</span></td>
+                                        <td class="user-nav__basket-cell">1,5 кг х <span class="user-nav__basket-price">300 руб.</span></td>
                                         <td class="user-nav__basket-cell">450 руб.</td>
                                     </tr>
                                 </tbody>
@@ -210,7 +215,7 @@
                             </li>
                         </ul>
                     </fieldset>
-                    <input type="submit" value="Отправить" class="filters__submit">
+                    <input type="submit" value="Применить" class="filters__submit">
                 </form>
             </section>
             <section class="products">
@@ -365,8 +370,8 @@
                             <path d="M10.8 0C9.4 0 8.2.7 7.5 1.7A4.1 4.1 0 004.2 0 4.1 4.1 0 000 4c0 3.2 7.5 9 7.5 9S15 7.2 15 4c0-2.2-1.9-4-4.2-4z"/>
                         </svg>
                     </li>
-                    <li class="about-company__item"><a href="" class="about-company__link link_light">О производстве</a></li>
                     <li class="about-company__item"><a href="" class="about-company__link link_light">Наши документы</a></li>
+                    <li class="about-company__item"><a href="" class="about-company__link link_light">О производстве</a></li>
                     <li class="about-company__item"><a href="" class="about-company__link link_light">Экологические стандарты</a></li>
                 </ul>
             </section>
@@ -377,5 +382,6 @@
                 <p class="made-in__text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="link_light">HTML Academy</a> © 2020</p>
             </div>
         </footer>
+        <script src="js/general.js"></script>
     </body>
 </html>
